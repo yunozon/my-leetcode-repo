@@ -15,3 +15,6 @@ wheels/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# datasets
+datasets/
