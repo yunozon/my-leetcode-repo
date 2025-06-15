@@ -9,10 +9,8 @@ class Solution:
                 print(f"{i} : i, j : {j}")
                 sum = nums[i] + nums[j]
                 if sum == target:
-                    ans.append(i)
-                    ans.append(j)
-                    return ans
-        return ans
+                    return [i, j]
+        return []
     
     def twoSum2(self, nums, target):
         ans = []
@@ -21,7 +19,7 @@ class Solution:
         while True:
             sum = 0
             sum = nums[start_index] + nums[end_index]                
-            
+
             if sum < 0:
                 if sum > target:
                     start_index += 1
@@ -58,12 +56,12 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 """
 # Test
 sol = Solution()
-# nums = [2,7,11,15]
-# target = 9
+nums = [2,7,11,15]
+target = 9
 
-# nums2 = [3, 2, 4]
-# target2 = 6
-# print(sol.twoSum(nums2, target2))
+nums2 = [3, 2, 4]
+target2 = 6
+print(sol.twoSum(nums2, target2))
 
 nums3 = [-1,-2,-3,-4,-5]
 target = -8
